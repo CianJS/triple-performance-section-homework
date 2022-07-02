@@ -1,0 +1,92 @@
+#triple-awards-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 150px 0 64px;
+
+  .triple-award-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .triple-award-image {
+      width: 400px;
+      height: 338px;
+      font-size: 15px;
+    }
+
+    .triple-award-description {
+      text-align: center;
+      color: rgba(58, 58, 58, 0.7);
+      font-size: 15px;
+      position: absolute;
+      bottom: 58px;
+      transform: translateY(100%);
+    }
+  }
+
+  .triple-award-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 223px;
+
+    .triple-award-contents {
+      margin-bottom: 50px;
+
+      .triple-award-contents-item {
+        display: flex;
+        align-items: baseline;
+        font-family: sans-serif;
+        max-height: 36px;
+        font-size: 36px;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .triple-store-awards {
+      display: flex;
+      align-items: center;
+
+      .triple-store-awards-item {
+        display: flex;
+        align-items: center;
+        font-family: sans-serif;
+        padding: 5px 0 5px 0;
+        color: rgba(58, 58, 58, 0.8);
+        font-weight: bold;
+        margin: 0;
+        font-size: 14px;
+        line-height: 22px;
+
+        &:last-child {
+          margin-left: 39px;
+        }
+
+        &.google-award::before {
+          content: '';
+          background: url('../../assets/play-store2x.png') no-repeat 0 0;
+          width: 54px;
+          height: 54px;
+          background-size: 54px 54px;
+          margin-right: 8px;
+        }
+
+        &.apple-award::before {
+          content: '';
+          background: url('../../assets/badge-apple4x.png') no-repeat 0 0;
+          width: 54px;
+          height: 54px;
+          background-size: 54px 54px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
