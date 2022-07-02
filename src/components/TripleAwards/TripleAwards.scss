@@ -1,3 +1,13 @@
+@keyframes fade-in-out {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 #triple-awards-section {
   display: flex;
   align-items: flex-start;
@@ -9,6 +19,8 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    animation: fade-in-out 700ms ease-in-out;
+    animation-fill-mode: forwards;
 
     .triple-award-image {
       width: 400px;
@@ -20,6 +32,7 @@
       text-align: center;
       color: rgba(58, 58, 58, 0.7);
       font-size: 15px;
+      font-family: sans-serif;
       position: absolute;
       bottom: 58px;
       transform: translateY(100%);
@@ -34,6 +47,10 @@
 
     .triple-award-contents {
       margin-bottom: 50px;
+      opacity: 0;
+      animation: fade-in-out 700ms ease-in-out;
+      animation-delay: 100ms;
+      animation-fill-mode: forwards;
 
       .triple-award-contents-item {
         display: flex;
@@ -53,6 +70,10 @@
     .triple-store-awards {
       display: flex;
       align-items: center;
+      opacity: 0;
+      animation: fade-in-out 700ms ease-in-out;
+      animation-delay: 200ms;
+      animation-fill-mode: forwards;
 
       .triple-store-awards-item {
         display: flex;
