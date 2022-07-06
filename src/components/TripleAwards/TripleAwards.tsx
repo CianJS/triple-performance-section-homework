@@ -6,19 +6,21 @@ import AutoCounter from '../AutoCounter/AutoCounter'
 
 const TripleAwards = (): ReactElement => {
   const awardContentsData = [
-    { count: 700, unit: '만 명', describe: '의 여행자' },
-    { count: 100, unit: '만 개', describe: '의 여행 리뷰' },
-    { count: 470, unit: '만 개', describe: '의 여행 일정' },
+    { maxNumber: 700, unit: '만 명', description: '의 여행자' },
+    { maxNumber: 100, unit: '만 개', description: '의 여행 리뷰' },
+    { maxNumber: 470, unit: '만 개', description: '의 여행 일정' },
   ]
 
-  const awardContents = () => {
-    return awardContentsData.map((data, index) => (
-      <div key={index} className="triple-award-contents-item">
-        <AutoCounter maxCount={data.count} description={data.unit} isStrong />
-        {data.describe}
-      </div>
-    ))
-  }
+  const awardContents = awardContentsData.map((data, index) => (
+    <div key={index} className="triple-award-contents-item">
+      <AutoCounter
+        maxNumber={data.maxNumber}
+        description={data.unit}
+        isStrong
+      />
+      {data.description}
+    </div>
+  ))
 
   return (
     <section id="triple-awards-section">
@@ -27,7 +29,7 @@ const TripleAwards = (): ReactElement => {
         <span className="triple-award-description">2021년 12월 기준</span>
       </div>
       <div className="triple-award-detail-wrapper">
-        <div className="triple-award-contents">{awardContents()}</div>
+        <div className="triple-award-contents">{awardContents}</div>
         <div className="triple-store-awards">
           <p className="triple-store-awards-item google-award">
             2018 구글 플레이스토어
