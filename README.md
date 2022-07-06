@@ -20,7 +20,7 @@ npm run start
 
 ```
 react v18.2.0 (2022.07.02 기준 creact-react-app 최신 버전으로 진행)
-sass: v1.53.0
+sass(scss 사용): v1.53.0
  - css 선택자의 중복 코드 제거 (ex. child 선택을 위한 parent > child 구조 코드)
  - css 보다 좋은 가독성
 ```
